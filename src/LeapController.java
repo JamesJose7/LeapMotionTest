@@ -44,7 +44,7 @@ class LeapListener extends Listener {
 							+ ", Tools: " + frame.tools().count()
 							+ ", Gestures: " + frame.gestures().count());
 		
-		/*for (Hand hand : frame.hands()) {
+		for (Hand hand : frame.hands()) {
 			String handType = hand.isLeft() ? "Left Hand" : "Right Hand";
 			System.out.println(handType + " " + ", id: " + hand.id()
 								+ ", Palm Position: " + hand.palmPosition());
@@ -56,7 +56,7 @@ class LeapListener extends Listener {
 								+ "Roll: " + Math.toDegrees(normal.roll())
 								+ " Yaw: " + Math.toDegrees(direction.yaw()));
 				
-		}*/
+		}
 		
 	}
 }
