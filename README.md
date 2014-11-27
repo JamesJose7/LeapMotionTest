@@ -1,4 +1,4 @@
 LeapMotionTest
 ==============
 
-Testing data with leap motion FTW babe
+Testing data with leap motion
