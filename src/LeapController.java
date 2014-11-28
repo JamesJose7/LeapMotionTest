@@ -56,7 +56,7 @@ class LeapListener extends Listener {
 								+ "Roll: " + Math.toDegrees(normal.roll())
 								+ " Yaw: " + Math.toDegrees(direction.yaw()));
 				
-		}*/
+		}
 		
 		for (Finger finger : frame.fingers()) {
 			System.out.println("//Finger Type: " + finger.type()
@@ -74,6 +74,14 @@ class LeapListener extends Listener {
 				
 			}
 			
+		}*/
+		
+		for (Tool tool : frame.tools()) {
+			System.out.println("Tool ID: " + tool.id()
+								+ " Tip position: " + tool.tipPosition()
+								+ " Direction: " + tool.direction()
+								+ " Width: " + tool.width()
+								+ " Touch Distance (mm) " + tool.touchDistance());
 		}
 	}
 }
