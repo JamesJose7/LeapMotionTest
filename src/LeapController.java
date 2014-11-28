@@ -37,7 +37,7 @@ class LeapListener extends Listener {
 		Frame frame = controller.frame();
 		
 		//Frame Data
-		System.out.println("Frame id: " + frame.id()
+		/*System.out.println("Frame id: " + frame.id()
 							+ ", Timestamp: " + frame.timestamp()
 							+ ", Hands: " + frame.hands().count()
 							+ ", Fingers: " + frame.fingers().count()
@@ -56,6 +56,13 @@ class LeapListener extends Listener {
 								+ "Roll: " + Math.toDegrees(normal.roll())
 								+ " Yaw: " + Math.toDegrees(direction.yaw()));
 				
+		}*/
+		
+		for (Finger finger : frame.fingers()) {
+			System.out.println("Finger Type: " + finger.type()
+								+ "ID: " + finger.id()
+								+ "Finger length (mm): " + finger.length()
+								+ "Finger width (mm): " + finger.width());
 		}
 		
 	}
