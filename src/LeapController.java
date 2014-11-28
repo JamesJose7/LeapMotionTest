@@ -59,12 +59,22 @@ class LeapListener extends Listener {
 		}*/
 		
 		for (Finger finger : frame.fingers()) {
-			System.out.println("Finger Type: " + finger.type()
-								+ "ID: " + finger.id()
-								+ "Finger length (mm): " + finger.length()
-								+ "Finger width (mm): " + finger.width());
-		}
+			System.out.println("//Finger Type: " + finger.type()
+								+ "  ID: " + finger.id()
+								+ "  Finger length (mm): " + finger.length()
+								+ "  Finger width (mm): " + finger.width());
 		
+		
+			for (Bone.Type boneType : Bone.Type.values()) {
+				Bone bone = finger.bone(boneType);
+				System.out.println("Bone Type: " + bone.type()
+									+ " Start: " + bone.prevJoint()
+									+ " End: " + bone.nextJoint()
+									+ " Direction: " + bone.direction());
+				
+			}
+			
+		}
 	}
 }
 
