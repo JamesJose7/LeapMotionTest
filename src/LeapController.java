@@ -122,6 +122,13 @@ class LeapListener extends Listener {
 									+ "  Speed: " + swipe.speed());
 					break;
 					
+				case TYPE_SCREEN_TAP:
+					ScreenTapGesture screenTap = new ScreenTapGesture(gesture);
+					System.out.println("ScreenTap ID: " + screenTap.id()
+										+ " State: " + screenTap.state()
+										+ " Position: " + screenTap.position()
+										+ " Direction: " + screenTap.direction());
+					
 					
 					
 			}
