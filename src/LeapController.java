@@ -74,7 +74,7 @@ class LeapListener extends Listener {
 				
 			}
 			
-		}*/
+		}
 		
 		for (Tool tool : frame.tools()) {
 			System.out.println("Tool ID: " + tool.id()
@@ -82,7 +82,39 @@ class LeapListener extends Listener {
 								+ " Direction: " + tool.direction()
 								+ " Width: " + tool.width()
 								+ " Touch Distance (mm) " + tool.touchDistance());
+		}*/
+		
+		GestureList gestures = frame.gestures();
+		for (int i = 0; i < gestures.count(); i++) {
+			Gesture gesture = gestures.get(i);
+			
+			switch (gesture.type()) {
+				case TYPE_CIRCLE:
+					CircleGesture circle = new CircleGesture(gesture);
+					
+					String clockwise;
+					if (circle.pointable().direction().angleTo(circle.normal()) <= Math.PI/4) {
+						clockwise = "clockwise";
+					} else {
+						clockwise = " counter-clockwise";
+					}
+					
+					double sweptAngle = 0;
+					if (circle.state() != State.STATE_START) {
+						CircleGesture previous = new CircleGesture(controller.frame(1).gesture(circle.id()));
+						sweptAngle = (circle.progress() - previous.progress()) * 2 * Math.PI;
+					}
+					
+					System.out.println("Circle ID: " + circle.id()
+										+ " State: " + circle.state()
+										+ " Progress: " + circle.progress()
+										+ " Radius: " + circle.radius()
+										+ " Angle: " + Math.toDegrees(sweptAngle)
+										+ " " + clockwise);
+					break;
+			}
 		}
+		
 	}
 }
 
