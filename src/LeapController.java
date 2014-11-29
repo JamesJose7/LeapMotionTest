@@ -106,12 +106,24 @@ class LeapListener extends Listener {
 					}
 					
 					System.out.println("Circle ID: " + circle.id()
-										+ " State: " + circle.state()
-										+ " Progress: " + circle.progress()
-										+ " Radius: " + circle.radius()
-										+ " Angle: " + Math.toDegrees(sweptAngle)
+										+ "  State: " + circle.state()
+										+ "  Progress: " + circle.progress()
+										+ "  Radius: " + circle.radius()
+										+ "  Angle: " + Math.toDegrees(sweptAngle)
 										+ " " + clockwise);
 					break;
+					
+				case TYPE_SWIPE:
+					SwipeGesture swipe = new SwipeGesture(gesture);
+					System.out.println("Swipe ID: " + swipe.id()
+									+ "  State: " + swipe.state()
+									+ "  Swipe position: " + swipe.position()
+									+ "  Direction: " + swipe.direction()
+									+ "  Speed: " + swipe.speed());
+					break;
+					
+					
+					
 			}
 		}
 		
