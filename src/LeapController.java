@@ -111,6 +111,13 @@ class LeapListener extends Listener {
 										+ "  Radius: " + circle.radius()
 										+ "  Angle: " + Math.toDegrees(sweptAngle)
 										+ " " + clockwise);
+					
+					int prog = (int) circle.progress();
+					
+					if(prog == 10) {
+						System.out.println("10 vueltas");
+					}
+					
 					break;
 					
 				case TYPE_SWIPE:
