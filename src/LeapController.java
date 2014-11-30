@@ -128,7 +128,19 @@ class LeapListener extends Listener {
 										+ " State: " + screenTap.state()
 										+ " Position: " + screenTap.position()
 										+ " Direction: " + screenTap.direction());
+					break;
 					
+				case TYPE_KEY_TAP: 
+					KeyTapGesture keyTap = new KeyTapGesture(gesture);
+					System.out.println("KeyTap ID: " + keyTap.id()
+										+ " State: " + keyTap.state()
+										+ " Position: " + keyTap.position()
+										+ " Direction: " + keyTap.direction());
+					break;
+					
+				default:
+					System.out.println("Unknown gesture");
+					break;
 					
 					
 			}
