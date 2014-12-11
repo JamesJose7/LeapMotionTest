@@ -36,16 +36,21 @@ class LeapListener extends Listener {
 		
 		Frame frame = controller.frame();
 		
-		//Frame Data
-		/*System.out.println("Frame id: " + frame.id()
+		/** Frame DATA */
+		
+		System.out.println("Frame id: " + frame.id()
 							+ ", Timestamp: " + frame.timestamp()
 							+ ", Hands: " + frame.hands().count()
 							+ ", Fingers: " + frame.fingers().count()
 							+ ", Tools: " + frame.tools().count()
 							+ ", Gestures: " + frame.gestures().count());
 		
-		for (Hand hand : frame.hands()) {
-			String handType = hand.isLeft() ? "Left Hand" : "Right Hand";
+		
+		
+		/** Hand DATA */
+		
+		/*for (Hand hand : frame.hands()) {
+			String handType = hand.isLeft() ? "------Left Hand" : "------Right Hand";
 			System.out.println(handType + " " + ", id: " + hand.id()
 								+ ", Palm Position: " + hand.palmPosition());
 			
@@ -53,7 +58,7 @@ class LeapListener extends Listener {
 			Vector direction = hand.direction();
 			
 			System.out.println("Pitch: " + Math.toDegrees(direction.pitch())
-								+ "Roll: " + Math.toDegrees(normal.roll())
+								+ " Roll: " + Math.toDegrees(normal.roll())
 								+ " Yaw: " + Math.toDegrees(direction.yaw()));
 				
 		}
@@ -84,7 +89,11 @@ class LeapListener extends Listener {
 								+ " Touch Distance (mm) " + tool.touchDistance());
 		}*/
 		
-		GestureList gestures = frame.gestures();
+		
+		
+		/** Gesture DATA */
+		
+		/*GestureList gestures = frame.gestures();
 		for (int i = 0; i < gestures.count(); i++) {
 			Gesture gesture = gestures.get(i);
 			
@@ -151,7 +160,7 @@ class LeapListener extends Listener {
 					
 					
 			}
-		}
+		}*/
 		
 	}
 }
