@@ -38,13 +38,13 @@ class LeapListener extends Listener {
 		
 		/** Frame DATA */
 		
-		System.out.println("Frame id: " + frame.id()
+		/*System.out.println("Frame id: " + frame.id()
 							+ ", Timestamp: " + frame.timestamp()
 							+ ", Hands: " + frame.hands().count()
 							+ ", Fingers: " + frame.fingers().count()
 							+ ", Tools: " + frame.tools().count()
 							+ ", Gestures: " + frame.gestures().count());
-		
+		*/
 		
 		
 		/** Hand DATA */
@@ -93,7 +93,7 @@ class LeapListener extends Listener {
 		
 		/** Gesture DATA */
 		
-		/*GestureList gestures = frame.gestures();
+		GestureList gestures = frame.gestures();
 		for (int i = 0; i < gestures.count(); i++) {
 			Gesture gesture = gestures.get(i);
 			
@@ -160,7 +160,7 @@ class LeapListener extends Listener {
 					
 					
 			}
-		}*/
+		}
 		
 	}
 }
